@@ -1224,27 +1224,57 @@ Extras
   border: none;
 }
 
-.pdf-actions {
-  margin-top: 1rem;
-}
-
-.btn-download-pdf {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--verde);
-  color: var(--branco);
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.btn-download-pdf:hover {
-  background-color: var(--verde-hover);
-}
-
+/* =========================
+   Responsividade Mobile (Sidebar e Layout Geral)
+========================= */
 @media (max-width: 768px) {
+
+  /* Ajuste da Sidebar para Mobile */
+  .sidebar {
+    width: 60px;
+    padding: 10px 5px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-item {
+    width: 35px;
+    height: 35px;
+  }
+
+  .menu-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Ajuste do Conteúdo */
+  .content {
+    margin-left: 60px;
+    padding: 20px;
+  }
+
+  section {
+    margin: 60px 0;
+  }
+
+  /* Ajuste Titulos */
+  .title,
+  .section-title-main {
+    font-size: 1.8rem;
+  }
+
+  /* PDF Viewer Height no Mobile */
   .pdf-container iframe {
-    height: 500px;
+    height: 400px;
+    min-height: 400px;
+  }
+
+  /* Esconder tooltips no mobile para não atrapalhar */
+  .menu-item::after,
+  .hover-menu-style::after {
+    display: none;
   }
 }
